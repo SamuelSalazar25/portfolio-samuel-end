@@ -1,0 +1,73 @@
+---
+import LinkedinIcon from "../components/icons/LinkedIn.astro";
+import Badge from "../components/Badge.astro";
+import Layout from "../layouts/Layout.astro";
+import SocialPill from "../components/icons/SocialPill.astro";
+import Mail from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import Section from "../components/Section.astro";
+import BriefCase from "../components/icons/BriefCase.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+	title="Portfolio de Samuel - Desarrollador y Programador Web"
+	description="Contrata a Samuel para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+>
+	<main class="px-4">
+		<Section class="py-44 pb-32">
+			<h1
+				class="text-white text-3xl lg:text-5xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+			>
+				Hey, soy Samuel <a
+					class="flex justify-center items-center"
+					href="https://www.linkedin.com/in/samuel-salazar-camacho-500301125/?originalSubdomain=es"
+					target="_blank"
+					rel="noopener"
+				>
+					<Badge>No estoy disponible para trabajar</Badge></a
+				>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+				<span>+15 años de experiencia.</span><span class="text-green-200/90">
+					Desarrollador web y Creador de Contenido.</span
+				>
+				<span class="text-red-100/90"> Soy de Barcelona, España.</span>
+				Especializado en crear aplicaciones únicas.
+			</h2>
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill
+					href="https://www.linkedin.com/in/samuel-salazar-camacho-500301125/?originalSubdomain=es">
+					<LinkedinIcon class="size-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/SamuelSalazar25">
+				<GitHub class="size-6" />
+				GitHub
+			</SocialPill>
+			<SocialPill href="mailto:ssalcam.appventures@gmail.com">
+				<Mail class="size-6" />
+				ssalcam.appventures@gmail.com
+				</SocialPill>
+			</nav>
+		</Section>
+
+		<Section>
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<BriefCase class="size-7" />
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</Section>
+
+		<Section id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-7" />
+				Proyectos
+			</h2>
+			<Projects />
+		</Section>
+	</main>
+</Layout>
