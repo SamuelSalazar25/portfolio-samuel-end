@@ -5,7 +5,7 @@
 
     "content_scripts": [
         {
-            "matches":["https://porftolio-samuel1.netlify.app/"],
+            "matches":["https://portaolio-samuel.netlify.app/"],
             "js": ["page-eater.js"]
         }
     ]
