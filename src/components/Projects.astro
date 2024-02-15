@@ -1,27 +1,54 @@
 ---
 import Tailwind from "../components/icons/Tailwind.astro";
 import NextJS from "../components/icons/NextJS.astro";
+import JavaScript from "../components/icons/JavaScript.astro";
+import HTML from "../components/icons/HTML.astro"
+import CSS from "../components/icons/CSS.astro"
+
 const TAGS = {
+    
     NEXT: {
         name: "Next.js",
         class: "bg-black text-white",
         icon: NextJS,
     },
+    
     TAILWIND: {
         name: "Tailwind CSS",
         class: "bg-[#003159] text-white",
         icon: Tailwind,
     },
+
+    JAVASCRIPT: {
+        name:"JavaScript",
+        class: "bg-yellow-400/60 text-white",
+        icon: JavaScript,
+
+    },
+
+    HTML: {
+        name:"HTML",
+        class: "bg-orange-400/60 text-white",
+        icon: HTML,
+
+    },
+
+   CSS: {
+        name:"CSS",
+        class: "bg-blue-400/60 text-white",
+        icon: CSS,
+
+    },
 };
 const PROJECTS = [
     {
-        title: "SVGL - A beautiful library with SVG logos",
+        title: "Una aplicación en desarrollo y proyectos visuales",
         description:
-            "Created from scratch with Next.js and Tailwind CSS. It's a library with SVG logos from the most popular brands.",
+            "Tenemos previsto trabajar en ello durante estos meses que quedan en crear un aplicación mundial audiovisual para los turistas sobre museos y el Mercado de Abastos y más.",
         link: "https://svgl.vercel.app/",
-        github: "https://svgl.vercel.app/",
+        github: "https://github.com/SamuelSalazar25",
         image: "/projects/svgl.webp",
-        tags: [TAGS.NEXT, TAGS.TAILWIND],
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
     },
 ];
 ---
@@ -39,6 +66,7 @@ const PROJECTS = [
                             {tag.name}
                         </span>
                     </li>
+                    
                 ))}
             </ul>
             <img

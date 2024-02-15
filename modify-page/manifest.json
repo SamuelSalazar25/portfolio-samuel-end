@@ -5,7 +5,7 @@
 
     "content_scripts": [
         {
-            "matches":["https://graceful-mooncake-16c6d2.netlify.app/"],
+            "matches":["https://porftolio-samuel1.netlify.app/"],
             "js": ["page-eater.js"]
         }
     ]
