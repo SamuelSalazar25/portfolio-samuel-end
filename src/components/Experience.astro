@@ -1,67 +1,176 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
- const EXPERIENCE = [
-   {date: "Actualmente...",
-    title: "Creador de contenido",
-    description: 
-"Divulgo sobre programación y desarrollo web en diferentes plataformas.",
-link:'#'},
-{
-    date: "Diciembre 2022",
-    title: "Principal Frontend Engineer",
-    description:
-    "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B Testing en más de 15 equipos.",
-},
-{
-    date: 'April 2022',
-    title: 'E-Commerce UI code in Tailwind CSS',
-    description: 'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.',
-},
-]
+const EXPERIENCE = [
+    {
+        date: "Actualmente...",
+        title: "Creador de contenido",
+        description:
+            "Divulgo sobre programación y desarrollo web en diferentes plataformas.",
+        link: "#",
+    },
+    {
+        date: "Diciembre 2022",
+        title: "Principal Frontend Engineer",
+        description:
+            "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B Testing en más de 15 equipos.",
+    },
+    {
+        date: "April 2022",
+        title: "E-Commerce UI code in Tailwind CSS",
+        description:
+            "Get started with dozens of web components and interactive elements built on top of Tailwind CSS.",
+    },
+];
 ---
-<ol class="relative border-s border-gray-200 ml-3">  
-                
+
+<ol class="relative border-s border-gray-200 ml-3">
     <li class="mb-10 ms-4">
-        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Octubre 2023</time>
-        <h3 class="text-lg font-semibold text-blue-300 dark:text-white">Adobe Photoshop y Html</h3>
-        <p class="mb-4 text-base font-normal text-gray-300 dark:text-gray-400">Más de 30 proyectos audiovisuales combinados, el aprendizaje entra de lleno con mecánicas nuevas y actualizándome en cada momento, os dejo un enlace con ejercicios que tuvimos que hacer de ejemplo.</p>
-        <a href="https://github.com/webferrol/html-sessions/blob/main/ejercicios-refuerzo.md" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Learn More... <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-  </svg></a>
-    </li>
-    
-    <li class="mb-10 ms-4">
-        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Noviembre 2023</time>
-        <h3 class="text-lg font-semibold text-blue-300 dark:text-white">Adobe Photoshop, HTML, CSS y PSeint</h3>
-        <p class="mb-4 text-base font-normal text-gray-300 dark:text-gray-400">Ya viendo lo básico de primer nivel desde cero sobre estas materias, pasamos a subir un escalón mas al respecto con CSS, me pareció muy práctico y divertido.</p>
-    </p>
-    <a href="https://github.com/webferrol/css-simple-text" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Learn More... <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-</svg></a>
-    </li>
-    
-    <li class="mb-10 ms-4">
-        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Diciembre 2023</time>
-        <h3 class="text-lg font-semibold text-blue-300 dark:text-white">Adobe Ilustrator y JavaScript</h3>
-        <p class="mb-4 text-base font-normal text-gray-300 text-gray-300">Diciembre empezó a subir el nivel con JavaScript, es un componente o un programa más complejo que HTML y hay que tener mucha paciencia con la escritura para no fallar hasta con las comillas. Ilustrator fue más llevadero y me gustó mucho la experiencia, muy similar a lo ya aprendido, que es Photoshop.</p>
-        <a href="/projects/mono.jpg" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Learn More... <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg></a>
+        <div
+            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+        >
+        </div>
+        <time
+            class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+            >Octubre 2023</time
+        >
+        <h3 class="text-lg font-semibold text-blue-300 dark:text-white">
+            Adobe Photoshop y Html
+        </h3>
+        <p class="mb-4 text-base font-normal text-gray-300 dark:text-gray-400">
+            Más de 30 proyectos audiovisuales combinados, el aprendizaje entra
+            de lleno con mecánicas nuevas y actualizándome en cada momento, os
+            dejo un enlace con ejercicios que tuvimos que hacer de ejemplo.
+        </p>
+        <a
+            href="https://github.com/webferrol/html-sessions/blob/main/ejercicios-refuerzo.md"
+            class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+            >Learn More... <svg
+                class="w-3 h-3 ms-2 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+            >
+                <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+            </svg></a
+        >
     </li>
 
     <li class="mb-10 ms-4">
-        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Enero 2024</time>
-        <h3 class="text-lg font-semibold text-blue-300 dark:text-white">JavaScript, PHP, Blender y viceversa</h3>
-        <p class="mb-4 text-base font-normal text-gray-300 dark:text-gray-400">Subiendo un escalón más con las animaciones, Blender resultó ser una aplicación muy complicada, trabaja con 2D y 3D, es muy útil y tiene muchas utilidades.</p>
-        <a href="/projects/adivinalo.png" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Learn More... <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg></a>
+        <div
+            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+        >
+        </div>
+        <time
+            class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+            >Noviembre 2023</time
+        >
+        <h3 class="text-lg font-semibold text-blue-300 dark:text-white">
+            Adobe Photoshop, HTML, CSS y PSeint
+        </h3>
+        <p class="mb-4 text-base font-normal text-gray-300 dark:text-gray-400">
+            Ya viendo lo básico de primer nivel desde cero sobre estas materias,
+            pasamos a subir un escalón mas al respecto con CSS, me pareció muy
+            práctico y divertido.
+        </p>
     </li>
-    
-
+    <a
+        href="https://github.com/webferrol/css-simple-text"
+        class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+        >Learn More... <svg
+            class="w-3 h-3 ms-2 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+        >
+            <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+        </svg></a
+    >
 </ol>
 
+<li class="mb-10 ms-4">
+    <div
+        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+    >
+    </div>
+    <time
+        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+        >Diciembre 2023</time
+    >
+    <h3 class="text-lg font-semibold text-blue-300 dark:text-white">
+        Adobe Ilustrator y JavaScript
+    </h3>
+    <p class="mb-4 text-base font-normal text-gray-300 text-gray-300">
+        Diciembre empezó a subir el nivel con JavaScript, es un componente o un
+        programa más complejo que HTML y hay que tener mucha paciencia con la
+        escritura para no fallar hasta con las comillas. Ilustrator fue más
+        llevadero y me gustó mucho la experiencia, muy similar a lo ya
+        aprendido, que es Photoshop.
+    </p>
+    <a
+        href="/projects/mono.jpg"
+        class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+        >Learn More... <svg
+            class="w-3 h-3 ms-2 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+        >
+            <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+        </svg></a
+    >
+</li>
+
+<li class="mb-10 ms-4">
+    <div
+        class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+    >
+    </div>
+    <time
+        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+        >Enero 2024</time
+    >
+    <h3 class="text-lg font-semibold text-blue-300 dark:text-white">
+        JavaScript, PHP, Blender y viceversa
+    </h3>
+    <p class="mb-4 text-base font-normal text-gray-300 dark:text-gray-400">
+        Subiendo un escalón más con las animaciones, Blender resultó ser una
+        aplicación muy complicada, trabaja con 2D y 3D, es muy útil y tiene
+        muchas utilidades.
+    </p>
+    <a
+        href="/projects/adivinalo.png"
+        class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+        >Learn More... <svg
+            class="w-3 h-3 ms-2 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+        >
+            <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+        </svg></a
+    >
+</li>
