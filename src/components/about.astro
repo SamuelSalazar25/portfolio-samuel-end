@@ -1,0 +1,171 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <title>Octagon Menu</title>
+  <body class="box absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
+    <div class="home">
+      <p class="animated-text"></p>
+    </div>
+    <ul class="menu">
+      <div class="menuToggle"><ion-icon name="add-outline"></ion-icon></div>
+      <li style="--i: 0; --clr: #ff2972">
+        <a href="#"><ion-icon name="home-outline"></ion-icon></a>
+      </li>
+      <li style="--i: 1; --clr: #fee800">
+        <a href="#"><ion-icon name="settings-outline"></ion-icon></a>
+      </li>
+      <li style="--i: 2; --clr: #04fc43">
+        <a href="#"><ion-icon name="mail-outline"></ion-icon></a>
+      </li>
+      <li style="--i: 3; --clr: #fe00f1">
+        <a href="#"><ion-icon name="key-outline"></ion-icon></a>
+      </li>
+      <li style="--i: 4; --clr: #00b0fe">
+        <a href="#"><ion-icon name="camera-outline"></ion-icon></a>
+      </li>
+      <li style="--i: 5; --clr: #fea600">
+        <a href="#"><ion-icon name="game-controller-outline"></ion-icon></a>
+      </li>
+      <li style="--i: 6; --clr: #a529ff">
+        <a href="#"><ion-icon name="person-outline"></ion-icon></a>
+      </li>
+      <li style="--i: 7; --clr: #01bdab">
+        <a href="#"><ion-icon name="videocam-outline"></ion-icon></a>
+      </li>
+    </ul>
+  </head>
+  <script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  
+  <script>
+      let menuToggle = document.querySelector(".menuToggle");
+      let menu = document.querySelector(".menu");
+      
+      menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+      </script>
+
+<script type="module" src="/main.js"></script>
+</body>
+
+<style>
+:root {
+		color-scheme: light dark;
+	}
+	html {
+		font-family: "Onest Variable", system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	body {
+    background: #000000;
+    background: -moz-radial-gradient(#ffffff33 1px, #00091d 1px);
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		background-color: #00091d;
+		background-size: 20px 20px;
+	}
+
+	body @media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+
+.menu {
+  position:static;
+  width:595px;
+  height: 300px;
+  display:flex ;
+  align-items:center;
+  justify-content: center;
+}
+.menu li {
+  position: absolute;
+  left: 215px;
+  list-style:disc;
+  transform: rotate(0deg) translateX(100px);
+  transform-origin: 125px;
+  transition: 0.6s;
+  transition-delay: calc(0.1s * var(--i));
+}
+.menu.active li {
+  transform: rotate(calc(363deg / 8 * var(--i)));
+}
+.menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  font-size: 22px;
+  border-radius: 50%;
+  transform: rotate(calc(360deg / -8 * var(--i)));
+  transition: 1s;
+  color: transparent;
+  transition-delay: 0.5s;
+  filter: drop-shadow(0 0 2px var(--clr));
+}
+.menu.active a {
+  color: var(--clr);
+}
+.menu a::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--clr);
+  transform: rotate(calc(90deg * var(--i))) translate(0, 25px);
+  transition: width 0.5s, height 0.5s, transform 0.5s;
+  transition-delay: 0.5s, 1s, 1.5s;
+}
+.menu.active a::before {
+  width: 50px;
+  height: 50px;
+  background: #161616;
+  border: 2px solid var(--clr);
+  transform: rotate(calc(0 * var(--i)));
+  transition: transform 0.5s, height 0.5s, width 0.5s;
+  transition-delay: 0.5s, 1.5s, 1.5s;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 5px var(--clr));
+  rotate: 135deg;
+}
+.menu.active li:hover a::before {
+  background: var(--clr);
+}
+.menu.active li:hover a ion-icon {
+  color: #161616;
+}
+
+.menuToggle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 32px;
+  transition: 1.5s;
+}
+.menu.active .menuToggle {
+  transform: rotate(315deg);
+}
+
+</style>
